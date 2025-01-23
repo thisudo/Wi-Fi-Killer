@@ -164,13 +164,16 @@ a connected wireless client (-c <client's mac>).
 06:46:34  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
 06:46:35  Sending DeAuth (code 7) to broadcast -- BSSID: [<HIDDEN_BSSID>]
 ```
-⚠️ Important Notes
-Run as root: You need admin privileges to make this work. (sudo is your friend) 🧑‍💻
-Be responsible: Don't mess with networks you don't own. 🚫
-NetworkManager might try to reconnect your interface automatically. The script does its best to stop that! ⛔
-Legal stuff: You're on your own here. Make sure you understand the laws in your country. 📜
-📜 License
-This script is licensed under the MIT License. Use it at your own risk! ⚠️
+
+🏃‍♂️ Usage
+Once you’ve finished with the attack, you can return the Wi-Fi card to managed mode by running the following commands:
+
+```bash
+sudo airmon-ng stop <interface>
+sudo systemctl restart NetworkManager
+```
+This will stop the monitor mode on your Wi-Fi interface and restart the NetworkManager service to get everything back to normal. 🔄
+
 
 ✍️ Author
 Abdo3Dr
