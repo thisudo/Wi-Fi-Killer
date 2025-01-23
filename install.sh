@@ -30,6 +30,6 @@ pip3 install tabulate
 
 # Give execute permission
 chmod +x wifi_killer.py
-
-echo "[+] Installation complete. Run the script with: python3 wi-fi_killer.py"
 clear
+echo "[+] Installation complete. Run the script with: python3 wi-fi_killer.py"
+
