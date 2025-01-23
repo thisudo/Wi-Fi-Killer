@@ -40,7 +40,7 @@ Clone the repo:
 ```bash
 git clone https://github.com/thisudo/wifi-Deauthentication-script
 cd wifi-Deauthentication-script
-sudo install.sh
+sudo bash install.sh
 ```
 This will set up all your dependencies:
 
