@@ -33,37 +33,22 @@ You'll also need to install the `tabulate` library:
 
 ```bash
 pip3 install tabulate
-⚙️ Installation
+```
 Get it up and running in just a few steps! 🎉
 
 Clone the repo:
-
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/thisudo/wifi-Deauthentication-script
 cd wifi-Deauthentication-script
-Run the installer:
-
+sudo install.sh
+```
 This will set up all your dependencies:
 
-bash
-Copy
-Edit
-./install.sh
-Make the Python script executable:
-
-bash
-Copy
-Edit
-chmod +x wifi_killer.py
 🏃‍♂️ Usage
 Run the script:
-
-bash
-Copy
-Edit
+```bash
 sudo python3 wifi_killer.py
+```
 Pick your interface (e.g., wlan0).
 
 Scan networks and pick the BSSID of the target you want to attack. 💥
