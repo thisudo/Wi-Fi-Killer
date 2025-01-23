@@ -176,4 +176,5 @@ This will stop the monitor mode on your Wi-Fi interface and restart the NetworkM
 
 
 ✍️ Author
-Abdo3Dr
+
+thisudo
