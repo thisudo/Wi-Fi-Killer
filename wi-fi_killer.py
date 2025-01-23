@@ -32,7 +32,7 @@ print("""
 ██║███╗██║██║╚════╝██╔══╝  ██║    ██╔═██╗ ██║██║     ██║     ██╔══╝  ██╔══██╗
 ╚███╔███╔╝██║      ██║     ██║    ██║  ██╗██║███████╗███████╗███████╗██║  ██║
  ╚══╝╚══╝ ╚═╝      ╚═╝     ╚═╝    ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝
-                                                                       by:abdo3Dr 
+                                                                       by:thisudo 
 [!] Wi-Fi Deauthentication Script [!]                
     For educational purposes only!
     Use at your own risk on your own network!
